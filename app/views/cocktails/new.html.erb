@@ -2,7 +2,8 @@
   <h1 class="text-center">Add a new Cocktail</h1>
   <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name, placeholder: "E.g. Mojito", hint: "Bathtub Gin is not a cocktail" %>
-  <%= f.submit class: "btn btn-primary" %>
+  <%= f.submit class:"btn btn-primary" %>
   <% end %>
-  <p><%= link_to "Back to cocktails", cocktails_path %></p>
+  <p><%= link_to "Back to cocktails", cocktails_path, class:"avatar"%></p>
 </div>
+
