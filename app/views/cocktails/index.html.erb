@@ -3,7 +3,9 @@
   <% @cocktails.each do |c|%>
     <div class="cocktails">
       <h2><%= link_to c.name, cocktail_path(c) %></h2>
+      <p><%= link_to "Delete", cocktail_path(c), method: :delete, data: {confirm: "Are you sure you want to delete?"} %></p>
     </div>
   <% end %>
-<p><%= link_to "Add new cocktail!", new_cocktail_path %></p>
+<p><%= link_to "Add new Cocktail!", new_cocktail_path, class: "btn btn-primary btn-lg" %></p>
 </div>
+

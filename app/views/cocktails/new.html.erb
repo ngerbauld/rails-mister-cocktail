@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>Add a new Cocktail</h1>
+  <h1 class="text-center">Add a new Cocktail</h1>
   <%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, placeholder: "E.g. Mojito", hint: "Bathtub Gin is not a cocktail" %>
   <%= f.submit class: "btn btn-primary" %>
   <% end %>
   <p><%= link_to "Back to cocktails", cocktails_path %></p>
