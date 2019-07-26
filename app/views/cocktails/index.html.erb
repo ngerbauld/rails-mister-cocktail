@@ -22,6 +22,16 @@
   </div>
 </div>
 
+<!-- search bar -->
+<div class="container">
+  <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+    <%= f.input :name, input_html: {value: ""} %>
+    <%= f.submit "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+<!-- end of the search bar -->
+
 <div class="container">
   <h1>Cocktails</h1>
 
@@ -54,3 +64,7 @@
     </div>
   </div>
 </div>
+
+<!-- <div>
+  <%= cl_image_tag("hi1qbabexe5squozacat", width: 400, height: 300, crop: :fill) %>
+</div> -->
