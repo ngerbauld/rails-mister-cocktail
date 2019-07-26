@@ -27,7 +27,7 @@ class CocktailsController < ApplicationController
     redirect_to @cocktail
   end
 
-   def destroy
+  def destroy
     @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
     redirect_to cocktails_path
@@ -35,6 +35,7 @@ class CocktailsController < ApplicationController
 
   def game
     @cocktails = Cocktail.all
+    @cocktail = @cocktails.sample
   end
 
   private

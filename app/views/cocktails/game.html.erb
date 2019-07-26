@@ -3,17 +3,90 @@
     <h1>Let the <strong>GAME</strong> begin!</h1>
   </div>
 </div>
+<!-- <h1><%= @cocktail.name %></h1> -->
 
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1547059470-3b0c7cd958a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80)">
-  Cocktail
+<div id="random" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1547059470-3b0c7cd958a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80)">
+  <p>START</p>
 </div>
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1556124526-31d95587c657?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80)">
+<div id="random2" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1556124526-31d95587c657?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80)">
   SHOTS
 </div>
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1562016825-b1c7cd4e8deb?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80)">
+<div id="random3" class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1562016825-b1c7cd4e8deb?ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80)">
   Sharing
 </div>
 
 <div class="card-category" style="background-color: black" >
   <p><%= link_to "Back to Homepage", cocktails_path %></p>
 </div>
+
+
+<script>
+  // const sleep_100 = () => {
+  //   await sleep(100);
+  // }
+  let random = document.querySelector('#random');
+  let random2 = document.querySelector('#random2');
+  let random3 = document.querySelector('#random3');
+  let index = 0;
+
+  // random.addEventListener("click", replaceCocktail('<%= j render 'cocktail' %>'))
+  random.addEventListener("click", (e) => {
+    let cocktail_name = [];
+    for (let i=0; i<50; i++) {
+      a1 = "<%= Cocktail.all.sample.name %>"
+      a2 = "<%= Cocktail.all.sample.name %>"
+      a3 = "<%= Cocktail.all.sample.name %>"
+      a4 = "<%= Cocktail.all.sample.name %>"
+      a5 = "<%= Cocktail.all.sample.name %>"
+      a6 = "<%= Cocktail.all.sample.name %>"
+      a7 = "<%= Cocktail.all.sample.name %>"
+      a8 = "<%= Cocktail.all.sample.name %>"
+      a9 = "<%= Cocktail.all.sample.name %>"
+      a10 = "<%= Cocktail.all.sample.name %>"
+      a11 = "<%= Cocktail.all.sample.name %>"
+      a12 = "<%= Cocktail.all.sample.name %>"
+      a13 = "<%= Cocktail.all.sample.name %>"
+      a14 = "<%= Cocktail.all.sample.name %>"
+      a15 = "<%= Cocktail.all.sample.name %>"
+      a16 = "<%= Cocktail.all.sample.name %>"
+      a17 = "<%= Cocktail.all.sample.name %>"
+      a18 = "<%= Cocktail.all.sample.name %>"
+      a19 = "<%= Cocktail.all.sample.name %>"
+      a20 = "<%= Cocktail.all.sample.name %>"
+      a21 = "<%= Cocktail.all.sample.name %>"
+      a22 = "<%= Cocktail.all.sample.name %>"
+      cocktail_name.push(a1)
+      cocktail_name.push(a2)
+      cocktail_name.push(a3)
+      cocktail_name.push(a4)
+      cocktail_name.push(a5)
+      cocktail_name.push(a6)
+      cocktail_name.push(a7)
+      cocktail_name.push(a8)
+      cocktail_name.push(a9)
+      cocktail_name.push(a10)
+      cocktail_name.push(a11)
+      cocktail_name.push(a12)
+      cocktail_name.push(a13)
+      cocktail_name.push(a14)
+      cocktail_name.push(a15)
+      cocktail_name.push(a16)
+      cocktail_name.push(a17)
+      cocktail_name.push(a18)
+      cocktail_name.push(a19)
+      cocktail_name.push(a20)
+      cocktail_name.push(a21)
+      cocktail_name.push(a22)
+    }
+
+    random.innerHTML = "Drink 1: " + cocktail_name[index];
+    random2.innerHTML = "Drink 2: " + cocktail_name[index +100]
+    random3.innerHTML = "Drink 3: " +cocktail_name[index +300]
+    index++
+  })
+
+  // function replaceCocktail(cocktail) {
+  //   console.log(this)
+  //   this.innerHTML = cocktail
+  // }
+</script>

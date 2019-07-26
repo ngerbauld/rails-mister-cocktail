@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # end
   get 'cocktails/game', to: 'cocktails#game', as: :game
 
-  resources :cocktails, only: [:new, :create, :index, :show, :edit] do
+  resources :cocktails, only: [:new, :create, :index, :show, :edit, :destroy] do
     resources :doses, shallow: true
   end
 
