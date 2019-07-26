@@ -2,7 +2,7 @@
   <h1><%= @cocktail.name %></h1>
   <img src= <%= @cocktail.image %> />
   <ul>
-    <div class="card-product">
+    <div>
    <% @cocktail.doses.each do |x| %>
       <div class="card-product-infos">
       <p><%=  x.description %></p>
