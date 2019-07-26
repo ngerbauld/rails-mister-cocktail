@@ -33,6 +33,10 @@ class CocktailsController < ApplicationController
     redirect_to cocktails_path
   end
 
+  def game
+    @cocktails = Cocktail.all
+  end
+
   private
 
   def cocktail_params

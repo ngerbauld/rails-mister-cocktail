@@ -1,19 +1,48 @@
 <div class="container">
   <h1><%= @cocktail.name %></h1>
+  <img src= <%= @cocktail.image %> />
   <ul>
+    <div class="card-product">
    <% @cocktail.doses.each do |x| %>
-    <div class="card p-3 m-3 col-3 ">
-    <p><%=  x.description %></p>
-    <p><%=  x.ingredient.name %></p>
-    <p><%= link_to "Delete dose", dose_path(x), method: :delete, data: {confirm: "Are you sure you want to delete?"} %></p>
+      <div class="card-product-infos">
+      <p><%=  x.description %></p>
+      <p><%=  x.ingredient.name %></p>
+      <p><%= link_to "Delete dose", dose_path(x), method: :delete, data: {confirm: "Are you sure you want to delete?"} %></p>
     </div>
     <% end %>
   </ul>
+
+  <!-- tabs -->
+   <!-- <ul class="list-inline tabs-underlined">
+      <li>
+        <a href="cocktails_path" class="tab-underlined active">Homepage</a>
+      </li>
+      <li>
+        <a href=edit_cocktail_path class="tab-underlined">Edit Cocktail</a>
+      </li>
+      <li>
+        <a href="#" class="tab-underlined">Add new dose</a>
+      </li>
+    </ul> -->
+  <!-- end tabs -->
   <p><%= link_to "Back to cocktails", cocktails_path %></p>
   <p><%= link_to "Edit cocktails", edit_cocktail_path %></p>
 
   <%= link_to "Add a new dose 😆", new_cocktail_dose_path(@cocktail) %>
   </div>
 
-
+  <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    </div>
+  </div>
 </div>
+
+
